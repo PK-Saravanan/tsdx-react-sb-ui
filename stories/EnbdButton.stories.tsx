@@ -25,10 +25,13 @@ const Template: Story<Props> = args => <EnbdButton {...args} />;
 // https://storybook.js.org/docs/react/workflows/unit-testing
 export const Default = Template.bind({});
 
+const inputTheme = {
+    // "btnHover": "red",
+    // "btnColor": "orange",
+    // "btnTextTransform": 'none'
+}
+
 Default.args = {
-    label: "Standrad", theme: {
-        '&:hover': {
-            backgroundColor: 'red'
-        }
-    }
+    label: "Standrad", 
+    theme: inputTheme
 };
