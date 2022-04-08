@@ -6,7 +6,7 @@ import {
   ThemeProvider,
   StyledEngineProvider,
 } from '@mui/material/styles';
-import './index.css'
+
 export interface Props {
   /** Name of the button will be displayed */
   label: string;
