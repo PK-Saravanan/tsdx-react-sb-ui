@@ -26,12 +26,12 @@ export interface Props {
  * A custom MUI Icon button component.
  */
 
-export const EnbdIconButton: FC<Props> = ({ label, theme, size = 'medium', backgroundColor, ...props }) => {
+export const EnbdIconButton: FC<Props> = ({ label, theme, size, backgroundColor, ...props }) => {
     return (
     <div>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={getBtnDefaultProps(btnProperties)}>
-          <Button variant="contained" className={['storybook-button', `storybook-button--${size}`].join(' ')} style={{ backgroundColor }}>{label}</Button>
+            <Button variant="contained">{label}</Button>
         </ThemeProvider>
       </StyledEngineProvider>
     </div>
