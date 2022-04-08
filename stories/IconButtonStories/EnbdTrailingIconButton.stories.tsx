@@ -1,10 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { EnbdIconButton, Props } from '../../src/EnbdIconButton';
+import { EnbdTrailingIconButton, Props } from '../../src/EnbdTrailingIconButton';
 
 const meta: Meta = {
-  title: 'Icon button',
-  component: EnbdIconButton,
+  title: 'Trailing Icon button',
+  component: EnbdTrailingIconButton,
   argTypes: {
     variant: {
       options: ['primary', 'secondary'],
@@ -18,14 +18,14 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = (args) => <EnbdIconButton {...args} />;
+const Template: Story<Props> = (args) => <EnbdTrailingIconButton {...args} />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
 export const Default = Template.bind({});
 
 Default.args = {
-  label: 'IconButton',
+  label: 'Trailing Icon Button',
   theme: {
     '&:hover': {
       backgroundColor: 'red',
@@ -35,7 +35,7 @@ Default.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  label: 'IconButton',
+  label: 'Trailing Icon Button',
   theme: {
     '&:hover': {
       backgroundColor: 'red',
@@ -48,7 +48,7 @@ Disabled.args = {
 
 export const Small = Template.bind({});
 Small.args = {
-  label: 'IconButton',
+  label: 'Trailing Icon Button',
   theme: {
     '&:hover': {
       backgroundColor: 'red',
@@ -62,7 +62,7 @@ Small.args = {
 
 export const Medium = Template.bind({});
 Medium.args = {
-  label: 'IconButton',
+  label: 'Trailing Icon Button',
   theme: {
     '&:hover': {
       backgroundColor: 'red',
@@ -76,7 +76,7 @@ Medium.args = {
 
 export const Large = Template.bind({});
 Large.args = {
-  label: 'IconButton',
+  label: 'Trailing Icon Button',
   theme: {
     '&:hover': {
       backgroundColor: 'red',

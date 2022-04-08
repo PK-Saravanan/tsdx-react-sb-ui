@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Button from '@mui/material/Button';
-import { btnProperties } from './IconProperties';
-import { getBtnDefaultProps } from './IconCustomThemeProvider';
+import { btnProperties } from './LeadingIconProperties';
+import { getBtnDefaultProps } from './LeadingIconCustomThemeProvider';
 import {
   ThemeProvider,
   StyledEngineProvider,
@@ -26,7 +26,7 @@ export interface Props {
  * A custom MUI Icon button component.
  */
 
-export const EnbdIconButton: FC<Props> = ({ label, theme, size = 'medium', backgroundColor, ...props }) => {
+export const EnbdLeadingIconButton: FC<Props> = ({ label, theme, size = 'medium', backgroundColor, ...props }) => {
     return (
     <div>
       <StyledEngineProvider injectFirst>
