@@ -23,11 +23,23 @@ console.log("combinedProps",combinedProps)
                         backgroundColor: combinedProps.btnBackgroundColor,
                         fontWeight: combinedProps.btnfontWeight,
                         textTransform : 'none',
+                        height : combinedProps.btnHeight,
+                        padding : combinedProps.btnPadding,
+                        margin : combinedProps.btnMargin,
+                        borderRadius : combinedProps.btnBorderRadious,
                         '&:hover' : {
-                            backgroundColor: combinedProps.btnHover,
+                            backgroundColor: combinedProps.btnHoverBackgroundColor,
 
                         },
-                        height : combinedProps.btnHeight
+                        '&:disabled' : {
+                            backgroundColor: combinedProps.btnDisabledBackgroundColor,
+                            color : combinedProps.btnDisabledFontColor
+
+                        },
+                        '&:focus' : {
+                            backgroundColor: combinedProps.btnFocusBackgroundColor,
+
+                        },
                     },
                 },
             },

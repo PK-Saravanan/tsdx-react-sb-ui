@@ -1,7 +1,9 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { EnbdButton, Props } from '../src/EnbdButton';
+import { EnbdButton, iButtonProps } from '../src/EnbdButton';
+import SendIcon from '@mui/icons-material/Send';
 
+import DeleteIcon from '@mui/icons-material/Delete';
 const meta: Meta = {
   title: 'Standrad button',
   component: EnbdButton,
@@ -19,7 +21,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = args => <EnbdButton {...args} />;
+const Template: Story<iButtonProps & any> = args => <EnbdButton {...args} />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
@@ -32,6 +34,9 @@ const inputTheme = {
 }
 
 Default.args = {
-    label: "Standrad", 
-    theme: inputTheme
+    label: "Standrad",
+    variant : "contained",
+    disabled : true,
+    startIcon : <SendIcon/>,
+    endIcon : <DeleteIcon/>
 };
