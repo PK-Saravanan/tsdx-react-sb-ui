@@ -16,32 +16,43 @@ console.log("combinedProps",combinedProps)
     return createTheme({
         components: {
             MuiButton: {
-                styleOverrides: {
-                    root: {
-                        fontSize: combinedProps.btnFontSize,
-                        color: combinedProps.btnColor,
-                        backgroundColor: combinedProps.btnBackgroundColor,
-                        fontWeight: combinedProps.btnfontWeight,
+                styleOverrides :{
+                    root : {
                         textTransform : 'none',
+                        fontSize: combinedProps.btnFontSize,
+                        fontWeight: combinedProps.btnfontWeight,
                         height : combinedProps.btnHeight,
                         padding : combinedProps.btnPadding,
                         margin : combinedProps.btnMargin,
                         borderRadius : combinedProps.btnBorderRadious,
+                    },
+                },
+                variants: [
+                    {
+                      props: { variant: 'contained', color: 'primary' },
+                      style: {
+                        color: combinedProps.btnColor,
+                        backgroundColor: combinedProps.btnBackgroundColor,
                         '&:hover' : {
                             backgroundColor: combinedProps.btnHoverBackgroundColor,
-
                         },
                         '&:disabled' : {
                             backgroundColor: combinedProps.btnDisabledBackgroundColor,
                             color : combinedProps.btnDisabledFontColor
-
                         },
                         '&:focus' : {
                             backgroundColor: combinedProps.btnFocusBackgroundColor,
-
                         },
+                      },
                     },
-                },
+                    {
+                        props: { variant: 'outlined', color: 'secondary' },
+                        style: {
+                        //   backgroundColor: 'grey',
+                        },
+                      },
+                  ],
+               
             },
         },
     });
