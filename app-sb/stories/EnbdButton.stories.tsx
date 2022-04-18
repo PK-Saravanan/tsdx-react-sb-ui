@@ -25,18 +25,20 @@ const Template: Story<iButtonProps & any> = args => <EnbdButton {...args} />;
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
+
 export const Default = Template.bind({});
-
-const inputTheme = {
-    // "btnHover": "red",
-    // "btnColor": "orange",
-    // "btnTextTransform": 'none'
-}
-
 Default.args = {
-    label: "Standrad",
+    label: "Submit",
     variant : "contained",
-    disabled : true,
+    color : "primary",
     startIcon : <SendIcon/>,
     endIcon : <DeleteIcon/>
+};
+
+export const SendBtn = Template.bind({});
+SendBtn.args = {
+  label : "Send",
+  variant : "outlined",
+  color : "primary",
+  startIcon : <SendIcon/> 
 };
