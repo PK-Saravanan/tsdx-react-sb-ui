@@ -59,3 +59,21 @@ console.log("combinedProps",combinedProps)
 }
    
 
+export const getInputDefaultProps = (defaultProperties  : any = {}) => {
+
+    let combinedProps : any = { ...defaultProperties , ...customThemeObject} 
+    
+    console.log("getInputDefaultProps",combinedProps)
+    
+        return createTheme({
+            components: {
+                MuiInputBase: {
+                    styleOverrides :{
+                        root : {
+                            borderRadius : combinedProps.inputBorderRadious,
+                        },
+                    },
+                },
+            },
+        });
+    }

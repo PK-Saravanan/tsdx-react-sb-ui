@@ -2,7 +2,8 @@ import React, { FC } from 'react';
 import Button, { ButtonClasses, ButtonTypeMap } from '@mui/material/Button';
 import { btnProperties } from './properties';
 import { getBtnDefaultProps } from '../customThemeProvider';
-import { ThemeProvider, StyledEngineProvider, SxProps, Theme } from '@mui/material/styles';
+import { SxProps, Theme } from '@mui/material/styles';
+import { EnbdStyledEngineProvider } from '../EnbdStyledEngineProvider';
 
 
 export interface iButtonProps extends ButtonTypeMap {
@@ -80,14 +81,12 @@ export interface iButtonProps extends ButtonTypeMap {
  */
 export const EnbdButton: FC<iButtonProps > = ({ label,startIcon,endIcon, ...rest }) => {
     return <div>
-        <StyledEngineProvider injectFirst>
-            <ThemeProvider theme={getBtnDefaultProps(btnProperties)}>
-                <Button {...rest} startIcon={startIcon} endIcon={endIcon} >
-                    {label}
-                </Button>
-               
-            </ThemeProvider>
-        </StyledEngineProvider>
+        <EnbdStyledEngineProvider theme={getBtnDefaultProps(btnProperties)}>
+            <Button {...rest} startIcon={startIcon} endIcon={endIcon} >
+                {label}
+            </Button>
+        </EnbdStyledEngineProvider>
+            
     </div>;
 };
 

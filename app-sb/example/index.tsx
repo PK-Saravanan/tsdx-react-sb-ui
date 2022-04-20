@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 import SendIcon from '@mui/icons-material/Send';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-// customThemeProvider({ "btnColor": "green" })
+//  customThemeProvider({ "btnColor": "green" })
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
       <Stack direction="row" spacing={2}>
         <EnbdButton variant="contained" startIcon={<SendIcon/>} label='Send' />
         <EnbdButton variant="contained" endIcon={<DeleteIcon/>} label='Delete'/>
-        <EnbdButton variant="contained" label='Revert' />
+        <EnbdButton variant="contained" label='Revert' disabled/>
         <EnbdButton variant="outlined" label='Yes' />
         <EnbdButton variant="outlined" label='No' />
         <EnbdButton variant="outlined" label='Add' startIcon={<SendIcon/>}/>

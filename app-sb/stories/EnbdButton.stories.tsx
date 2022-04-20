@@ -5,7 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 const meta: Meta = {
-  title: 'Standrad button',
+  title: 'Enbd Button',
   component: EnbdButton,
   argTypes: {
     variant: {
